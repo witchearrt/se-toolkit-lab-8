@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: mcp-lms
+Version: 1.0.0
+Summary: MCP server and shared client library for the LMS backend
+Requires-Python: ==3.14.*
+Requires-Dist: httpx<1.0.0,>=0.28.0
+Requires-Dist: mcp<2.0.0,>=1.26.0
+Requires-Dist: opentelemetry-distro[otlp]>=0.61b0
+Requires-Dist: opentelemetry-exporter-otlp-proto-grpc>=1.40.0
+Requires-Dist: opentelemetry-instrumentation-httpx>=0.61b0
+Requires-Dist: opentelemetry-instrumentation-logging>=0.61b0
+Requires-Dist: pydantic<3.0.0,>=2.12.0
