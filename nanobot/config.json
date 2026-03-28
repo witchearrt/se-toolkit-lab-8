@@ -1,0 +1,72 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "./workspace",
+      "model": "coder-model",
+      "provider": "custom",
+      "maxTokens": 8192,
+      "contextWindowTokens": 65536,
+      "temperature": 0.1,
+      "maxToolIterations": 40
+    }
+  },
+  "channels": {
+    "sendProgress": true,
+    "webchat": {
+      "enabled": true,
+      "host": "0.0.0.0",
+      "port": 8765,
+      "allowFrom": [
+        "*"
+      ],
+      "accessToken": "witchearrt"
+    }
+  },
+  "providers": {
+    "custom": {
+      "apiKey": "xxjfnbdhb9mTIWlOL9EQVkBWEGRGOEIR7zTkRR8o8UzX7JV00FhUE3A0tYbmsT9IKleq5WCUAYOrAxKEa6RwDA",
+      "apiBase": "http://localhost:42005/v1"
+    }
+  },
+  "gateway": {
+    "host": "0.0.0.0",
+    "port": 18790
+  },
+  "tools": {
+    "mcpServers": {
+      "lms": {
+        "command": "python",
+        "args": [
+          "-m",
+          "mcp_lms"
+        ],
+        "env": {
+          "NANOBOT_LMS_BACKEND_URL": "http://localhost:42002",
+          "NANOBOT_LMS_API_KEY": "witchearrt"
+        }
+      },
+      "obs": {
+        "command": "python",
+        "args": [
+          "-m",
+          "mcp_obs"
+        ],
+        "env": {
+          "NANOBOT_VICTORIALOGS_URL": "http://localhost:42010",
+          "NANOBOT_VICTORIATRACES_URL": "http://localhost:42011"
+        }
+      },
+      "webchat": {
+        "command": "python",
+        "args": [
+          "-m",
+          "mcp_webchat"
+        ],
+        "env": {
+          "NANOBOT_WEBCHAT_UI_RELAY_URL": "ws://localhost:8765",
+          "NANOBOT_WEBCHAT_UI_RELAY_TOKEN": "witchearrt"
+        }
+      }
+    }
+  }
+}

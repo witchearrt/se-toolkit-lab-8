@@ -1,0 +1,7 @@
+httpx<1.0.0,>=0.28.0
+mcp<2.0.0,>=1.26.0
+opentelemetry-distro[otlp]>=0.61b0
+opentelemetry-exporter-otlp-proto-grpc>=1.40.0
+opentelemetry-instrumentation-httpx>=0.61b0
+opentelemetry-instrumentation-logging>=0.61b0
+pydantic<3.0.0,>=2.12.0
